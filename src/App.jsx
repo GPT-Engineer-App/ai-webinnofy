@@ -4,6 +4,8 @@ import About from "./pages/About.jsx";
 import Features from "./pages/Features.jsx";
 import Contact from "./pages/Contact.jsx";
 import Pricing from "./pages/Pricing.jsx";
+import AIPage from "./pages/AIPage.jsx";
+import Resources from "./pages/Resources.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -17,6 +19,8 @@ function App() {
         <Route exact path="/features" element={<Features />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/pricing" element={<Pricing />} />
+        <Route exact path="/ai-agents" element={<AIPage />} />
+        <Route exact path="/resources" element={<Resources />} />
       </Routes>
       <Footer />
     </Router>
