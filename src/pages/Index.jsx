@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Heading, Box } from "@chakra-ui/react";
+import { Container, Text, VStack, Heading, Button } from "@chakra-ui/react";
 
 const Index = () => {
   return (
@@ -8,6 +8,7 @@ const Index = () => {
         <Text fontSize="lg" textAlign="center">
           Harness the power of AI to create exceptional customer experiences. Automate conversations, personalize interactions, and gain valuable insights with Webinnofy.
         </Text>
+        <Button colorScheme="blue" size="lg" mt={4}>Get Started</Button>
       </VStack>
     </Container>
   );
