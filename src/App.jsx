@@ -3,7 +3,9 @@ import Index from "./pages/Index.jsx";
 import About from "./pages/About.jsx";
 import Features from "./pages/Features.jsx";
 import Contact from "./pages/Contact.jsx";
+import Pricing from "./pages/Pricing.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Route exact path="/about" element={<About />} />
         <Route exact path="/features" element={<Features />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/pricing" element={<Pricing />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
