@@ -1,5 +1,6 @@
 import { Container, Text, VStack, Heading, Button, Box, Flex, Image } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
@@ -8,108 +9,100 @@ const Index = () => {
       <Box as="section" w="full" mb={10}>
         <Flex direction={{ base: "column", md: "row" }} align="center" justify="space-between">
           <VStack align="start" spacing={4} maxW="lg">
-            <Heading as="h1" size="2xl" color="brand.700">AI Agents That Transform Your Business</Heading>
+            <Heading as="h1" size="2xl" color="brand.700">Everything App for Your Teams</Heading>
             <Text fontSize="lg">
-              Harness the power of AI to create exceptional customer experiences. Automate conversations, personalize interactions, and gain valuable insights with Webinnofy.
+              Help your team collaborate, communicate, and manage tasks efficiently with Webinnofy.
             </Text>
-            <Button as={RouterLink} to="/features" colorScheme="blue" size="lg">Learn More</Button>
+            <Button as={RouterLink} to="/features" colorScheme="orange" size="lg">Get Started</Button>
           </VStack>
           <Box maxW="md" mt={{ base: 6, md: 0 }}>
-            <video width="100%" autoPlay loop muted>
-              <source src="/path-to-your-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Image src="/images/abstract-visual.jpg" alt="Abstract Visual" />
+            </motion.div>
           </Box>
         </Flex>
       </Box>
 
-      {/* Benefits Showcase */}
+      {/* Productivity Section */}
       <Box as="section" w="full" mb={10}>
-        <Heading as="h2" size="xl" color="brand.700" mb={6}>Key Benefits</Heading>
+        <Heading as="h2" size="xl" color="brand.700" mb={6}>Unmatched Productivity</Heading>
         <Flex direction={{ base: "column", md: "row" }} justify="space-between">
           <VStack align="start" spacing={4} maxW="sm">
             <Image src="/images/benefit1.jpg" alt="Benefit 1" />
-            <Text fontSize="lg" fontWeight="bold">Increased Efficiency</Text>
-            <Text>Automate repetitive tasks and free up your team to focus on what matters most.</Text>
+            <Text fontSize="lg" fontWeight="bold">Task Management</Text>
+            <Text>Keep track of tasks and deadlines with ease.</Text>
           </VStack>
           <VStack align="start" spacing={4} maxW="sm">
             <Image src="/images/benefit2.jpg" alt="Benefit 2" />
-            <Text fontSize="lg" fontWeight="bold">Improved Customer Satisfaction</Text>
-            <Text>Provide 24/7 support and personalized interactions to delight your customers.</Text>
+            <Text fontSize="lg" fontWeight="bold">Real-time Collaboration</Text>
+            <Text>Collaborate with your team in real-time.</Text>
           </VStack>
           <VStack align="start" spacing={4} maxW="sm">
             <Image src="/images/benefit3.jpg" alt="Benefit 3" />
-            <Text fontSize="lg" fontWeight="bold">Higher Sales</Text>
-            <Text>Leverage AI to identify opportunities and drive revenue growth.</Text>
+            <Text fontSize="lg" fontWeight="bold">Notifications</Text>
+            <Text>Stay updated with instant notifications.</Text>
           </VStack>
         </Flex>
       </Box>
 
-      {/* Features Overview */}
+      {/* Collaboration Section */}
       <Box as="section" w="full" mb={10}>
-        <Heading as="h2" size="xl" color="brand.700" mb={6}>Core Features</Heading>
+        <Heading as="h2" size="xl" color="brand.700" mb={6}>Work Together. Like in the Office.</Heading>
         <Flex direction={{ base: "column", md: "row" }} justify="space-between">
           <VStack align="start" spacing={4} maxW="sm">
-            <Image src="/images/feature1.jpg" alt="Feature 1" />
-            <Text fontSize="lg" fontWeight="bold">Feature 1</Text>
-            <Text>Clear description of feature 1 and its benefits.</Text>
+            <Text fontSize="lg" fontWeight="bold">Customize Workspaces</Text>
+            <Text>Tailor your workspace to fit your team's needs.</Text>
           </VStack>
           <VStack align="start" spacing={4} maxW="sm">
-            <Image src="/images/feature2.jpg" alt="Feature 2" />
-            <Text fontSize="lg" fontWeight="bold">Feature 2</Text>
-            <Text>Clear description of feature 2 and its benefits.</Text>
+            <Text fontSize="lg" fontWeight="bold">Audio and Video Calls</Text>
+            <Text>Communicate effectively with built-in audio and video calls.</Text>
           </VStack>
           <VStack align="start" spacing={4} maxW="sm">
-            <Image src="/images/feature3.jpg" alt="Feature 3" />
-            <Text fontSize="lg" fontWeight="bold">Feature 3</Text>
-            <Text>Clear description of feature 3 and its benefits.</Text>
+            <Text fontSize="lg" fontWeight="bold">Invite Guests</Text>
+            <Text>Collaborate with external partners and clients.</Text>
           </VStack>
         </Flex>
       </Box>
 
-      {/* Pricing and Plans */}
+      {/* Integration Section */}
       <Box as="section" w="full" mb={10}>
-        <Heading as="h2" size="xl" color="brand.700" mb={6}>Pricing and Plans</Heading>
+        <Heading as="h2" size="xl" color="brand.700" mb={6}>Sync with GitHub. Both ways.</Heading>
         <Flex direction={{ base: "column", md: "row" }} justify="space-between">
           <VStack align="start" spacing={4} maxW="sm">
-            <Heading as="h3" size="lg">Basic Plan</Heading>
-            <Text fontSize="lg">$599 one-time purchase</Text>
-            <Text>Includes 10 AI agents for customer support.</Text>
-            <Button colorScheme="blue">Buy Now</Button>
+            <Text fontSize="lg" fontWeight="bold">Two-way Synchronization</Text>
+            <Text>Keep your tasks and code in sync.</Text>
           </VStack>
           <VStack align="start" spacing={4} maxW="sm">
-            <Heading as="h3" size="lg">Pro Plan</Heading>
-            <Text fontSize="lg">$7999 one-time purchase</Text>
-            <Text>Includes 100 AI agents for various business roles.</Text>
-            <Button colorScheme="blue">Buy Now</Button>
+            <Text fontSize="lg" fontWeight="bold">Private Tasks</Text>
+            <Text>Manage private tasks securely.</Text>
+          </VStack>
+          <VStack align="start" spacing={4} maxW="sm">
+            <Text fontSize="lg" fontWeight="bold">Multiple Repositories</Text>
+            <Text>Work with multiple repositories seamlessly.</Text>
           </VStack>
         </Flex>
       </Box>
 
-      {/* Testimonials and Case Studies */}
+      {/* MetaBrain Section */}
       <Box as="section" w="full" mb={10}>
-        <Heading as="h2" size="xl" color="brand.700" mb={6}>Testimonials and Case Studies</Heading>
-        <Flex direction={{ base: "column", md: "row" }} justify="space-between">
-          <VStack align="start" spacing={4} maxW="sm">
-            <Text fontSize="lg" fontWeight="bold">Customer 1</Text>
-            <Text>"Webinnofy has transformed our customer support process. Our customers are happier than ever!"</Text>
-          </VStack>
-          <VStack align="start" spacing={4} maxW="sm">
-            <Text fontSize="lg" fontWeight="bold">Customer 2</Text>
-            <Text>"The AI agents are incredibly efficient and have helped us increase our sales by 20%."</Text>
-          </VStack>
-          <VStack align="start" spacing={4} maxW="sm">
-            <Text fontSize="lg" fontWeight="bold">Customer 3</Text>
-            <Text>"We love how easy it is to customize the AI agents to fit our specific needs."</Text>
-          </VStack>
-        </Flex>
+        <Heading as="h2" size="xl" color="brand.700" mb={6}>Webinnofy MetaBrain</Heading>
+        <Text fontSize="lg">
+          Webinnofy offers a wide range of features to create and manage your project efficiently. With a suite of collaboration tools and seamless integrations, Webinnofy is your ultimate productivity partner.
+        </Text>
+        <Text fontSize="lg">
+          Collaborate in real-time, share documents, and manage tasks effortlessly. Webinnofy MetaBrain ensures your team stays connected and productive.
+        </Text>
       </Box>
 
       {/* Call to Action */}
       <Box as="section" w="full" mb={10}>
         <Flex direction="column" align="center">
-          <Heading as="h2" size="xl" color="brand.700" mb={6}>Ready to Transform Your Business?</Heading>
-          <Button as={RouterLink} to="/contact" colorScheme="blue" size="lg">Request a Demo</Button>
+          <Heading as="h2" size="xl" color="brand.700" mb={6}>Join the Movement</Heading>
+          <Button as={RouterLink} to="/contact" colorScheme="orange" size="lg">Get Started</Button>
         </Flex>
       </Box>
     </Container>
